@@ -1,0 +1,20 @@
+<div style="display: flex; justify-content: center; align-items: center;">
+    <div>
+        <canvas #canvas
+                width="400"
+                height="200"
+                (mousedown)="startDrawing($event)"
+                (mousemove)="draw($event)"
+                (mouseup)="stopDrawing()"
+                (mouseleave)="stopDrawing()"                        
+                (touchstart)="startDrawingTouch($event)"
+                (touchmove)="drawTouch($event)"
+                (touchend)="stopDrawing()"        
+                style="border-radius: 5px; border: 1px solid green;">
+        </canvas>
+        <br>
+        <button type="button" label="Limpiar" icon="pi pi-eraser" iconPos="left" (click)="resetCanvas()">Limpiar Canvas</button>
+        <button type="button" (click)="descargarFirma()">Descargar</button>
+    </div>
+</div>
+
